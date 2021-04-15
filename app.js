@@ -6,9 +6,6 @@ var logger = require('morgan');
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var booksRouter = require('./routes/books');
-const {
-  get
-} = require('./routes/users');
 
 var app = express();
 
@@ -23,10 +20,6 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/books', booksRouter);
-
-app.get('/books', function (req, res) {
-  res.send("Hej till books routern!")
-});
 
 
 module.exports = app;
