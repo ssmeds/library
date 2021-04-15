@@ -1,7 +1,7 @@
 {
   "name": "books",
   "version": "0.0.0",
-  "private": false,
+  "private": true,
   "scripts": {
     "start": "npm start"
   },
