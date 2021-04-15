@@ -18,7 +18,9 @@ app.use(express.urlencoded({
   extended: false
 }));
 app.use(cookieParser());
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname, 'public'), {
+  index: false
+}));
 
 app.use('/', booksRouter);
 app.use('/users', usersRouter);
